@@ -3,21 +3,6 @@
 > An automated crop quality assessment system combining **YOLOv8 transfer learning** with classical image processing techniques to detect, classify, and grade 32 types of fruits and vegetables.
 
 
-## 📌 Table of Contents
-
-- [Overview](#overview)
-- [Problem Statement](#problem-statement)
-- [Proposed Solution](#proposed-solution)
-- [Dataset](#dataset)
-- [Methodology](#methodology)
-- [Results](#results)
-- [Repository Structure](#repository-structure)
-- [Implementation Environment](#implementation-environment)
-- [Getting Started](#getting-started)
-- [Quality Grading System](#quality-grading-system)
-- [Future Work](#future-work)
-
-
 ## Overview
 
 Manual quality inspection of fruits and vegetables is subjective, time-consuming, and inconsistent. This project presents a **Grocery Quality Assistant** an end-to-end pipeline that automatically identifies crop types and evaluates their quality into three grades: **Excellent**, **Acceptable**, and **Poor**.
@@ -46,6 +31,15 @@ The system combines a fine-tuned **YOLOv8l-cls** classification model with multi
 - Reduce dependence on large, manually labeled ripeness datasets.
 - Improve generalization across diverse fruits and vegetables.
 
+ ## Project Motivation  
+This project is motivated by the need for a scalable automated system for fruit and vegetable quality inspection in real-world environments such as food production plants, sorting centers, and retail supply chains, aiming to reduce human dependency and improve consistency in quality assessment.
+
+- Automate quality inspection in food manufacturing production lines  
+- Improve sorting and grading in packing and distribution centers  
+- Reduce human error in agricultural quality evaluation  
+- Support quality control in retail environments and supply chains  
+- Combine deep learning with image processing to improve accuracy and interpretability  
+
 
 ## Dataset
 
@@ -55,15 +49,13 @@ The dataset was constructed specifically for this project and consists of **10,8
 |---|---|
 | Total Images | 10,800 |
 | Number of Classes | 32 |
-| Preprocessing | Resizing, augmentation, train/validation split |
-| Background Removal | Applied using `rembg` |
 
 ### Crop Classes
 
 The dataset includes the following 32 fruit and vegetable classes:
 
-<!-- Replace with your actual class list -->
-`Apple` · `Banana` · `Carrot` · `Cucumber` · `Grape` · `Kiwi` · `Lemon` · `Mango` · `Orange` · `Peach` · `Pear` · `Pineapple` · `Pomegranate` · `Potato` · `Strawberry` · `Tomato` · *(and 16 more)*
+
+`Avocado` · `Banana` · `Blackberry` · `Blueberry` · `Carrot` · `Cherry` · `Cucumber` · `Eggplant` · `Ginger` · `Green Grapes` · `Guava` · `Kiwi` · `Lemon` · `Limes` · `Mango` · `Orange` · `Papaya` · `Peach` · `Pear` · `Pepper Green` · `Pepper Orange` · `Pepper Red` · `Pepper Yellow` · `Pomegranate` · `Potato` · `Red Grapes` · `Red Onion` · `RedApple` · `Strawberry` · `Tomato` · `White Onion` · `Zucchini`
 
 > 📂 The dataset folder is included in this repository. Each class has its own subdirectory.
 
@@ -133,32 +125,13 @@ Input Image
 📦 grocery-quality-assistant/
 ├── 📓 grocery_quality_assistant.ipynb   # Main pipeline notebook
 ├── 📁 dataset/                          # Crop image dataset (32 classes)
-│   ├── apple/
+│   ├── Avocado/
 │   ├── banana/
 │   └── ...
-├── 📁 model/                            # Trained YOLOv8 model weights
-│   └── best.pt
+├── best.pt (available in GitHub Releases)      # Trained model weights 
 └── 📄 README.md
 ```
 
-
-## Implementation Environment
-
-### Training Environment
-| Component | Details |
-|---|---|
-| Platform | Google Colaboratory (Colab Pro) |
-| GPU | NVIDIA A100 |
-| Training Time | 0.503 hours / 80 epochs |
-| Environment Manager | Miniconda / Anaconda |
-
-### Inference Environment
-| Component | Details |
-|---|---|
-| Platform | Local Machine — Windows 11 Home 64-bit |
-| CPU | 12th Gen Intel Core i7-1260U @ 1.1 GHz |
-| RAM | 16 GB |
-| IDE | Visual Studio Code |
 
 ### Key Libraries
 
