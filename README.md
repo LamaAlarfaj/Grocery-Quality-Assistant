@@ -20,7 +20,7 @@
 
 ## Overview
 
-Manual quality inspection of fruits and vegetables is subjective, time-consuming, and inconsistent. This project presents a **Grocery Quality Assistant** — an end-to-end pipeline that automatically identifies crop types and evaluates their quality into three grades: **Excellent**, **Acceptable**, and **Poor**.
+Manual quality inspection of fruits and vegetables is subjective, time-consuming, and inconsistent. This project presents a **Grocery Quality Assistant** an end-to-end pipeline that automatically identifies crop types and evaluates their quality into three grades: **Excellent**, **Acceptable**, and **Poor**.
 
 The system combines a fine-tuned **YOLOv8l-cls** classification model with multiple image processing functions (color uniformity, surface defect detection, texture analysis, and sprouting detection) to deliver reliable, generalizable quality assessment across diverse crop types.
 
@@ -225,9 +225,3 @@ The system evaluates each crop across four dimensions and combines the scores us
 - Compare with other architectures (e.g., EfficientNet, Vision Transformers).
 
 
-## 📄 License
-
-This project was developed as a graduation project at **King Saud University**, College of Computer and Information Sciences.
-
-
-*Built using YOLOv8 + OpenCV + Python*
