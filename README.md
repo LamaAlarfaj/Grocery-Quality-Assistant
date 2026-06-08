@@ -124,12 +124,11 @@ Input Image
 ```
 📦 grocery-quality-assistant/
 ├── 📓 grocery_quality_assistant.ipynb   # Main pipeline notebook
-├── 📁 dataset/                          # Crop image dataset (32 classes)
-│   ├── Avocado/
-│   ├── banana/
-│   └── ...
-├── best.pt (available in GitHub Releases)      # Trained model weights 
-└── 📄 README.md
+├── 📄 README.md
+├── 📁 dataset/                          # Dataset stored on Google Drive
+│   └── https://drive.google.com/file/d/1hXn0kKQOqZE5YXv6GmgxbHvN1GwcIxUi/view?usp=drive_link
+└── 📦 best.pt                           # Trained model stored on Google Drive & also available in the Releases
+    └── https://drive.google.com/file/d/1RIJ1_XtQs7Q08L5B2tgOTQgUlG4gxH1C/view?usp=drive_link
 ```
 
 
